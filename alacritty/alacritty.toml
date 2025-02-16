@@ -1,0 +1,64 @@
+general.import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[window]
+padding = { x = 8, y = 8 }
+dynamic_padding = true
+decorations = "none"
+opacity = 0.95
+dimensions = { columns = 120, lines = 30 }
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "GeistMono Nerd Font", style = "Regular" }
+bold = { family = "GeistMono Nerd Font", style = "Bold" }
+italic = { family = "GeistMono Nerd Font", style = "Italic" }
+bold_italic = { family = "GeistMono Nerd Font", style = "Bold Italic" }
+size = 11.0
+offset = { x = 0, y = 1 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+unfocused_hollow = true
+thickness = 0.15
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+color = "#cba6f7"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[terminal]
+osc52 = "CopyPaste"
+
+[keyboard]
+bindings = [
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "Insert", mods = "Shift", action = "PasteSelection" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "F11", mods = "None", action = "ToggleFullscreen" },
+    { key = "L", mods = "Control", action = "ClearLogNotice" },
+    { key = "L", mods = "Control", chars = "\u000C" },
+    { key = "PageUp", mods = "None", action = "ScrollPageUp" },
+    { key = "PageDown", mods = "None", action = "ScrollPageDown" },
+    { key = "Home", mods = "Shift", action = "ScrollToTop" },
+    { key = "End", mods = "Shift", action = "ScrollToBottom" }
+]
+
+[mouse]
+hide_when_typing = true
